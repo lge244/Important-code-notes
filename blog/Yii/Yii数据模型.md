@@ -32,10 +32,10 @@ $res = Test::find()->where(['id'=>1])->all()
 id >0 ;//查询id小于0的数据
 $res =  Test::find()->where(['>','id',0])->all()
 
-id >= 1 并且 id <= 2 //查询id大于或等于1并且小于或等于2的数据
+id >= 1 并且 id <= 2 // between(注：两者之间的) 查询id大于或等于1并且小于或等于2的数据
 $res = Test::find()->where(['between','id',1,2])->all()
 
-//将查询到的结果转化为数组
+//asArray() 将查询到的结果转化为数组
 $res = Test::find()->where(['between','id',1,2])->asArray()->all()
 
 //批量查询 每次查询5条数据 赋给$res
