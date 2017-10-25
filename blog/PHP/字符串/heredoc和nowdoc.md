@@ -20,6 +20,7 @@ $table =<<<TABLE
             </td>
         </tr>
     </table>
+TABLE
 ```
 * 和双引号的作用基本是一样的
 
@@ -33,3 +34,14 @@ $table =<<<TABLE
 >标识名 //结束符
 
 * nowdoc开头符需要加单引号，使用起来和单引号的作用一样
+
+```PHP
+$table =<<<'TABLE'
+    <table>
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>
+TABLE
+```
